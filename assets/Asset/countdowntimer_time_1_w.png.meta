@@ -1,0 +1,134 @@
+{
+  "ver": "1.0.27",
+  "importer": "image",
+  "imported": true,
+  "uuid": "173e96a4-90e3-4e64-bc10-c120f476ab2e",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "173e96a4-90e3-4e64-bc10-c120f476ab2e@6c48a",
+      "displayName": "countdowntimer_time_1_w",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "173e96a4-90e3-4e64-bc10-c120f476ab2e",
+        "visible": false
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f9941": {
+      "importer": "sprite-frame",
+      "uuid": "173e96a4-90e3-4e64-bc10-c120f476ab2e@f9941",
+      "displayName": "countdowntimer_time_1_w",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "userData": {
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": -1,
+        "offsetY": 0.5,
+        "trimX": 16,
+        "trimY": 6,
+        "width": 94,
+        "height": 115,
+        "rawWidth": 128,
+        "rawHeight": 128,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [
+            -47,
+            -57.5,
+            0,
+            47,
+            -57.5,
+            0,
+            -47,
+            57.5,
+            0,
+            47,
+            57.5,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ],
+          "uv": [
+            16,
+            122,
+            110,
+            122,
+            16,
+            7,
+            110,
+            7
+          ],
+          "nuv": [
+            0.125,
+            0.0546875,
+            0.859375,
+            0.0546875,
+            0.125,
+            0.953125,
+            0.859375,
+            0.953125
+          ],
+          "minPos": [
+            -47,
+            -57.5,
+            0
+          ],
+          "maxPos": [
+            47,
+            57.5,
+            0
+          ]
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "173e96a4-90e3-4e64-bc10-c120f476ab2e@6c48a",
+        "atlasUuid": "",
+        "trimType": "auto"
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "hasAlpha": true,
+    "fixAlphaTransparencyArtifacts": false,
+    "redirect": "173e96a4-90e3-4e64-bc10-c120f476ab2e@6c48a"
+  }
+}

@@ -423,6 +423,11 @@ export class GameControl extends Component {
 
     private onArrowPassedNoCollision(arrowId: string) {
         this.arrowPassCount++;
+        if(this.totalArrow - this.arrowPassCount <= 1) {
+            //End
+            return;
+        }
+
         if(this.arrowPassCount >= this.totalArrow ){
 
             this.actWin();

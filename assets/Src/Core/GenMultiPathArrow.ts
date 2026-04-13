@@ -1,4 +1,4 @@
-import { Color } from 'cc';
+import { color, Color } from 'cc';
 import { Graphics } from 'cc';
 import { Vec3, Vec2 } from 'cc';
 import { _decorator, Component, Node, JsonAsset, SpriteFrame, Sprite, UITransform, instantiate, Layers, Label } from 'cc';
@@ -7,6 +7,7 @@ import {NodeInput} from "db://assets/Src/Element/NodeInput";
 import { LevelData, LevelDataHelper, ArrowPathData } from './LevelData';
 import {GameManager} from "db://assets/PLAGameFoundation/gameControl/core/manager/gameManager";
 import {Constant} from "db://assets/constant/constant";
+import { DEBUG } from 'cc/env';
 const { ccclass, property } = _decorator;
 
 enum Direction {
@@ -218,8 +219,10 @@ export class GenMultiPathArrow extends Component {
     @property({ tooltip: 'Debug: hiển thị ID path trên mỗi arrow' })
     isDebug: boolean = false;
 
-    @property({ tooltip: 'Debug: độ lệch Y của label ID so với đầu arrow (pixels)' })
+    @property({ tooltip: 'Debug: độ lệch Y của label ID so với đầu arrow (pixels)', visible() { return this.isDebug} })
     debugLabelYOffset: number = 28;
+    @property({ type: Color, visible() { return this.isDebug} })
+    colorDebugLabel: Color = color(255, 255, 255, 255)
 
     @property({ min: 0 })
     delayEnableTouch: number = 0;
@@ -1192,7 +1195,7 @@ export class GenMultiPathArrow extends Component {
     }
 
     private updateArrowDebugLabels() {
-        if (!this.isDebug) {
+        if (!this.isDebug && DEBUG) {
             this.clearArrowDebugLabels();
             return;
         }
@@ -1279,6 +1282,7 @@ export class GenMultiPathArrow extends Component {
         label.string = arrowId;
         label.fontSize = 18;
         label.lineHeight = 18;
+        label.color = this.colorDebugLabel
         label.enableWrapText = false;
 
         const uiTransform = labelNode.getComponent(UITransform) || labelNode.addComponent(UITransform);
