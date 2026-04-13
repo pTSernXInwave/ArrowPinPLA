@@ -425,7 +425,8 @@ export class GameControl extends Component {
 
     private onArrowPassedNoCollision(arrowId: string) {
         this.arrowPassCount++;
-        if(this.arrowPassCount >= 3) {
+        console.log(this.arrowPassCount, "/", this.totalArrow)
+        if(this.totalArrow - this.arrowPassCount <= 1) {
             this.butNode.active = true;
             return;
         }
