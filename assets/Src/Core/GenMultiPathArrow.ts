@@ -7,7 +7,7 @@ import {NodeInput} from "db://assets/Src/Element/NodeInput";
 import { LevelData, LevelDataHelper, ArrowPathData } from './LevelData';
 import {GameManager} from "db://assets/PLAGameFoundation/gameControl/core/manager/gameManager";
 import {Constant} from "db://assets/constant/constant";
-import { DEBUG } from 'cc/env';
+import { DEBUG, EDITOR } from 'cc/env';
 const { ccclass, property } = _decorator;
 
 enum Direction {
@@ -203,8 +203,22 @@ export class GenMultiPathArrow extends Component {
     @property({ type: JsonAsset, tooltip: 'Level config JSON (required)' })
     levelConfig: JsonAsset = null;
 
-    @property({ tooltip: 'Delay khởi tạo level ở start (giây)' })
+    @property({ tooltip: 'Delay khá»Ÿi táº¡o level á»Ÿ start (giÃ¢y)' })
     startLoadDelay: number = 0.2;
+
+    @property({})
+    get actPreview() { return false; }
+    set actPreview(x: boolean) {
+        if (!x) return;
+        this.previewGridInEditor();
+    }
+
+    @property({})
+    get actClearPreview() { return false; }
+    set actClearPreview(x: boolean) {
+        if (!x) return;
+        this.clearPreviewGridInEditor();
+    }
 
     // ========== Outer Lane Settings ==========
     @property({ tooltip: 'Khoảng cách từ grid edge đến outer lane (pixels)' })
@@ -321,7 +335,41 @@ export class GenMultiPathArrow extends Component {
         this.applyLevelData(levelData);
         callback?.(true);
     }
+    private previewGridInEditor() {
+        if (!EDITOR) return;
 
+        if (!this.genGrid) {
+            this.genGrid = this.node.getComponent(GenGridInput);
+        }
+        if (!this.genGrid) {
+            console.warn('[GenMultiPathArrow] Cannot preview grid: missing GenGridInput');
+            return;
+        }
+        if (!this.levelConfig) {
+            console.warn('[GenMultiPathArrow] Cannot preview grid: missing levelConfig JsonAsset');
+            return;
+        }
+
+        const levelData = this.levelConfig.json as LevelData;
+        if (!LevelDataHelper.validate(levelData)) {
+            console.error('[GenMultiPathArrow] Cannot preview grid: invalid level data');
+            return;
+        }
+
+        this.genGrid.setGridSizeFromLevelConfig(levelData.gridRows, levelData.gridCols, true);
+    }
+
+    private clearPreviewGridInEditor() {
+        if (!EDITOR) return;
+
+        if (!this.genGrid) {
+            this.genGrid = this.node.getComponent(GenGridInput);
+        }
+        if (!this.genGrid) return;
+
+        this.genGrid.clearAllPaths();
+        this.genGrid.clearGrid();
+    }
     /**
      * Apply LevelData vào game
      */
@@ -3142,3 +3190,7 @@ export class GenMultiPathArrow extends Component {
     }
 
 }
+
+
+
+

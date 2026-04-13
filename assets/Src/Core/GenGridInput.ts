@@ -162,13 +162,21 @@ export class GenGridInput extends Component {
     /**
      * Sync rows/columns from level config then regenerate grid
      */
-    public setGridSizeFromLevelConfig(levelRows: number, levelCols: number) {
+    public setGridSizeFromLevelConfig(levelRows: number, levelCols: number, forceRegenerate: boolean = false) {
         const nextRows = Math.max(0, Math.floor(levelRows));
         const nextCols = Math.max(0, Math.floor(levelCols));
 
+        const currentRows = this.listGrid2Side.length;
+        const currentCols = currentRows > 0 ? this.listGrid2Side[0].length : 0;
+        const hasExistingGrid = this.listGrid.length > 0;
+        const sameDimension = currentRows === nextRows && currentCols === nextCols;
+
         this.rows = nextRows;
         this.columns = nextCols;
-        this.generateGrid();
+
+        if (forceRegenerate || !hasExistingGrid || !sameDimension) {
+            this.generateGrid();
+        }
     }
     public clearGrid() {
         // Destroy tất cả các node

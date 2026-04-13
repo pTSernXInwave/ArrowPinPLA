@@ -19,7 +19,6 @@ export class MoveCir extends Component {
     onProgress(c: number, m: number) {
         const _v = c/m;
         const _target = this._root.clone().lerp(this.pos, _v);
-        console.log("_Out >>", _target.toString(), " _ _ ", _v, " _  _ ", _target.toString())
         this.target.setPosition(_target)
     }
 }

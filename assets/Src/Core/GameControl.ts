@@ -165,7 +165,7 @@ export class GameControl extends Component {
     NextLevel(){
         GameManager.instance.audioManager.stopSingleSound("sfx_voice_terriblesing")
         this.offNodex.forEach(_ => _.active = false)
-        this.confettiManager.node.active = false;
+        //this.confettiManager.node.active = false;
         this.camFocus.node.setWorldPosition(this._saveCamPos)
         this.camFocus.orthoHeight = this._savedZoom;
         this.gameMain.active = false;
@@ -458,11 +458,11 @@ export class GameControl extends Component {
 
     protected _savedZoom = 0
     protected actWin() {
-        this.confettiManager.playWin();
-        GameManager.instance.audioManager.playSound('sfx_ui_win')
-        GameManager.instance.audioManager.playSound('Firework')
-        GameManager.instance.audioManager.playSound('sfx_voice_terriblesing')
-        this.animWin.play();
+        this.confettiManager?.playWin();
+        //GameManager.instance.audioManager.playSound('sfx_ui_win')
+        //GameManager.instance.audioManager.playSound('Firework')
+        //GameManager.instance.audioManager.playSound('sfx_voice_terriblesing')
+        this.animWin?.play();
         this.enemySkeleton.setAnimation(0, this.winAnim, true);
         const _delay = this.animWin.defaultClip.duration + this.extraDelay;
 

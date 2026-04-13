@@ -129,7 +129,7 @@
     "__type__": "cc.RealCurve",
     "_times": [
       0,
-      0.16666666666666666
+      0.1666666716337204
     ],
     "_values": [
       {
@@ -212,8 +212,8 @@
     "__type__": "cc.RealCurve",
     "_times": [
       0,
-      1.3333333333333333,
-      1.5833333333333333
+      1.3333333730697632,
+      1.5833333730697632
     ],
     "_values": [
       {
@@ -272,8 +272,8 @@
     "__type__": "cc.RealCurve",
     "_times": [
       0,
-      1.3333333333333333,
-      1.5833333333333333
+      1.3333333730697632,
+      1.5833333730697632
     ],
     "_values": [
       {
@@ -332,8 +332,8 @@
     "__type__": "cc.RealCurve",
     "_times": [
       0,
-      1.3333333333333333,
-      1.5833333333333333
+      1.3333333730697632,
+      1.5833333730697632
     ],
     "_values": [
       {
@@ -488,7 +488,7 @@
     "__type__": "cc.RealCurve",
     "_times": [
       0,
-      0.3333333333333333
+      0.3333333432674408
     ],
     "_values": [
       {
@@ -571,7 +571,7 @@
     "__type__": "cc.RealCurve",
     "_times": [
       0,
-      0.3333333333333333
+      0.3333333432674408
     ],
     "_values": [
       {
@@ -592,7 +592,7 @@
         "__type__": "cc.RealKeyframeValue",
         "interpolationMode": 0,
         "tangentWeightMode": 0,
-        "value": -34.05799865722656,
+        "value": 80.78800201416016,
         "rightTangent": 0,
         "rightTangentWeight": 1,
         "leftTangent": 0,
@@ -616,7 +616,7 @@
     "__type__": "cc.RealCurve",
     "_times": [
       0,
-      0.3333333333333333
+      0.3333333432674408
     ],
     "_values": [
       {
@@ -637,7 +637,7 @@
         "__type__": "cc.RealKeyframeValue",
         "interpolationMode": 0,
         "tangentWeightMode": 0,
-        "value": 92.5,
+        "value": -309.4630126953125,
         "rightTangent": 0,
         "rightTangentWeight": 1,
         "leftTangent": 0,
@@ -661,7 +661,7 @@
     "__type__": "cc.RealCurve",
     "_times": [
       0,
-      0.3333333333333333
+      0.3333333432674408
     ],
     "_values": [
       {
