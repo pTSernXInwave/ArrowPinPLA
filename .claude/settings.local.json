@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(awk:*)",
+      "Bash(dir:*)",
+      "Bash(git restore:*)"
+    ]
+  }
+}

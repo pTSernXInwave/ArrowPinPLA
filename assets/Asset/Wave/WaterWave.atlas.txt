@@ -1,0 +1,11 @@
+WaterWave.png
+size:666,252
+filter:Linear,Linear
+pma:true
+scale:0.85
+s1_0
+bounds:2,2,519,80
+s1_1
+bounds:2,168,662,82
+s1_2
+bounds:2,84,608,82

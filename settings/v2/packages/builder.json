@@ -1,0 +1,43 @@
+{
+  "__version__": "1.3.9",
+  "textureCompressConfig": {
+    "userPreset": {
+      "ae8DvfCMFJ8ZOqcLx5qdiR": {
+        "name": "Sprite Compress Config",
+        "options": {
+          "web": {
+            "png": {
+              "quality": 10
+            }
+          },
+          "ios": {
+            "png": {
+              "quality": 10
+            }
+          },
+          "miniGame": {
+            "png": {
+              "quality": 10
+            }
+          },
+          "android": {
+            "png": {
+              "quality": 10
+            }
+          }
+        }
+      }
+    }
+  },
+  "splash-setting": {
+    "logo": {
+      "image": "project://settings/TitleGame.png",
+      "type": "custom"
+    },
+    "displayRatio": 1.5,
+    "background": {
+      "image": "project://settings/bgggg.jpg",
+      "type": "custom"
+    }
+  }
+}

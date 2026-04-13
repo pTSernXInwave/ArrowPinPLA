@@ -1,0 +1,637 @@
+{
+  "levelId": "level-4",
+  "levelName": "Level 4",
+  "gridRows": 10,
+  "gridCols": 10,
+  "gridSize": 70,
+  "paths": [
+    {
+      "id": "path-1",
+      "coords": [
+        {
+          "row": 0,
+          "col": 4
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        }
+      ],
+      "color": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 255
+      },
+      "lineWidth": 8
+    },
+    {
+      "id": "path-2",
+      "coords": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 3,
+          "col": 0
+        },
+        {
+          "row": 4,
+          "col": 0
+        }
+      ],
+      "color": {
+        "r": 255,
+        "g": 0,
+        "b": 0,
+        "a": 255
+      },
+      "lineWidth": 8
+    },
+    {
+      "id": "path-3",
+      "coords": [
+        {
+          "row": 3,
+          "col": 2
+        },
+        {
+          "row": 4,
+          "col": 2
+        },
+        {
+          "row": 4,
+          "col": 1
+        },
+        {
+          "row": 5,
+          "col": 1
+        },
+        {
+          "row": 5,
+          "col": 0
+        }
+      ],
+      "color": {
+        "r": 0,
+        "g": 128,
+        "b": 0,
+        "a": 255
+      },
+      "lineWidth": 8
+    },
+    {
+      "id": "path-4",
+      "coords": [
+        {
+          "row": 5,
+          "col": 3
+        },
+        {
+          "row": 5,
+          "col": 2
+        },
+        {
+          "row": 6,
+          "col": 2
+        },
+        {
+          "row": 6,
+          "col": 1
+        },
+        {
+          "row": 6,
+          "col": 0
+        }
+      ],
+      "color": {
+        "r": 0,
+        "g": 0,
+        "b": 255,
+        "a": 255
+      },
+      "lineWidth": 8
+    },
+    {
+      "id": "path-5",
+      "coords": [
+        {
+          "row": 3,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 3
+        },
+        {
+          "row": 1,
+          "col": 4
+        },
+        {
+          "row": 1,
+          "col": 5
+        },
+        {
+          "row": 0,
+          "col": 5
+        }
+      ],
+      "color": {
+        "r": 255,
+        "g": 165,
+        "b": 0,
+        "a": 255
+      },
+      "lineWidth": 8
+    },
+    {
+      "id": "path-7",
+      "coords": [
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 3
+        },
+        {
+          "row": 2,
+          "col": 4
+        },
+        {
+          "row": 2,
+          "col": 5
+        },
+        {
+          "row": 2,
+          "col": 6
+        },
+        {
+          "row": 1,
+          "col": 6
+        },
+        {
+          "row": 0,
+          "col": 6
+        },
+        {
+          "row": 0,
+          "col": 7
+        }
+      ],
+      "color": {
+        "r": 0,
+        "g": 128,
+        "b": 128,
+        "a": 255
+      },
+      "lineWidth": 8
+    },
+    {
+      "id": "path-8",
+      "coords": [
+        {
+          "row": 1,
+          "col": 7
+        },
+        {
+          "row": 1,
+          "col": 8
+        },
+        {
+          "row": 0,
+          "col": 8
+        },
+        {
+          "row": 0,
+          "col": 9
+        }
+      ],
+      "color": {
+        "r": 128,
+        "g": 128,
+        "b": 0,
+        "a": 255
+      },
+      "lineWidth": 8
+    },
+    {
+      "id": "path-9",
+      "coords": [
+        {
+          "row": 1,
+          "col": 9
+        },
+        {
+          "row": 2,
+          "col": 9
+        },
+        {
+          "row": 2,
+          "col": 8
+        },
+        {
+          "row": 2,
+          "col": 7
+        }
+      ],
+      "color": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 255
+      },
+      "lineWidth": 8
+    },
+    {
+      "id": "path-10",
+      "coords": [
+        {
+          "row": 3,
+          "col": 3
+        },
+        {
+          "row": 4,
+          "col": 3
+        },
+        {
+          "row": 4,
+          "col": 4
+        },
+        {
+          "row": 3,
+          "col": 4
+        },
+        {
+          "row": 3,
+          "col": 5
+        },
+        {
+          "row": 3,
+          "col": 6
+        }
+      ],
+      "color": {
+        "r": 255,
+        "g": 0,
+        "b": 0,
+        "a": 255
+      },
+      "lineWidth": 8
+    },
+    {
+      "id": "path-11",
+      "coords": [
+        {
+          "row": 3,
+          "col": 7
+        },
+        {
+          "row": 3,
+          "col": 8
+        },
+        {
+          "row": 3,
+          "col": 9
+        },
+        {
+          "row": 4,
+          "col": 9
+        }
+      ],
+      "color": {
+        "r": 0,
+        "g": 128,
+        "b": 0,
+        "a": 255
+      },
+      "lineWidth": 8
+    },
+    {
+      "id": "path-12",
+      "coords": [
+        {
+          "row": 5,
+          "col": 9
+        },
+        {
+          "row": 5,
+          "col": 8
+        },
+        {
+          "row": 4,
+          "col": 8
+        },
+        {
+          "row": 4,
+          "col": 7
+        },
+        {
+          "row": 5,
+          "col": 7
+        },
+        {
+          "row": 5,
+          "col": 6
+        },
+        {
+          "row": 4,
+          "col": 6
+        },
+        {
+          "row": 4,
+          "col": 5
+        },
+        {
+          "row": 5,
+          "col": 5
+        },
+        {
+          "row": 5,
+          "col": 4
+        }
+      ],
+      "color": {
+        "r": 0,
+        "g": 0,
+        "b": 255,
+        "a": 255
+      },
+      "lineWidth": 8
+    },
+    {
+      "id": "path-13",
+      "coords": [
+        {
+          "row": 6,
+          "col": 3
+        },
+        {
+          "row": 6,
+          "col": 4
+        },
+        {
+          "row": 6,
+          "col": 5
+        },
+        {
+          "row": 6,
+          "col": 6
+        },
+        {
+          "row": 7,
+          "col": 6
+        },
+        {
+          "row": 7,
+          "col": 5
+        },
+        {
+          "row": 7,
+          "col": 4
+        }
+      ],
+      "color": {
+        "r": 255,
+        "g": 165,
+        "b": 0,
+        "a": 255
+      },
+      "lineWidth": 8
+    },
+    {
+      "id": "path-14",
+      "coords": [
+        {
+          "row": 7,
+          "col": 3
+        },
+        {
+          "row": 7,
+          "col": 2
+        },
+        {
+          "row": 7,
+          "col": 1
+        },
+        {
+          "row": 7,
+          "col": 0
+        },
+        {
+          "row": 8,
+          "col": 0
+        },
+        {
+          "row": 8,
+          "col": 1
+        },
+        {
+          "row": 8,
+          "col": 2
+        },
+        {
+          "row": 8,
+          "col": 3
+        }
+      ],
+      "color": {
+        "r": 128,
+        "g": 0,
+        "b": 128,
+        "a": 255
+      },
+      "lineWidth": 8
+    },
+    {
+      "id": "path-15",
+      "coords": [
+        {
+          "row": 9,
+          "col": 4
+        },
+        {
+          "row": 9,
+          "col": 3
+        },
+        {
+          "row": 9,
+          "col": 2
+        },
+        {
+          "row": 9,
+          "col": 1
+        },
+        {
+          "row": 9,
+          "col": 0
+        }
+      ],
+      "color": {
+        "r": 0,
+        "g": 128,
+        "b": 128,
+        "a": 255
+      },
+      "lineWidth": 8
+    },
+    {
+      "id": "path-16",
+      "coords": [
+        {
+          "row": 8,
+          "col": 4
+        },
+        {
+          "row": 8,
+          "col": 5
+        },
+        {
+          "row": 8,
+          "col": 6
+        },
+        {
+          "row": 8,
+          "col": 7
+        },
+        {
+          "row": 7,
+          "col": 7
+        },
+        {
+          "row": 6,
+          "col": 7
+        },
+        {
+          "row": 6,
+          "col": 8
+        },
+        {
+          "row": 6,
+          "col": 9
+        }
+      ],
+      "color": {
+        "r": 128,
+        "g": 128,
+        "b": 0,
+        "a": 255
+      },
+      "lineWidth": 8
+    },
+    {
+      "id": "path-17",
+      "coords": [
+        {
+          "row": 7,
+          "col": 8
+        },
+        {
+          "row": 8,
+          "col": 8
+        },
+        {
+          "row": 9,
+          "col": 8
+        },
+        {
+          "row": 9,
+          "col": 7
+        },
+        {
+          "row": 9,
+          "col": 6
+        },
+        {
+          "row": 9,
+          "col": 5
+        }
+      ],
+      "color": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 255
+      },
+      "lineWidth": 8
+    },
+    {
+      "id": "path-18",
+      "coords": [
+        {
+          "row": 7,
+          "col": 9
+        },
+        {
+          "row": 8,
+          "col": 9
+        },
+        {
+          "row": 9,
+          "col": 9
+        }
+      ],
+      "color": {
+        "r": 255,
+        "g": 0,
+        "b": 0,
+        "a": 255
+      },
+      "lineWidth": 8
+    }
+  ],
+  "stones": [
+    { "row": 0, "col": 0 },
+    { "row": 0, "col": 4 },
+    { "row": 0, "col": 5 },
+    { "row": 1, "col": 1 },
+    { "row": 1, "col": 6 },
+    { "row": 2, "col": 0 },
+    { "row": 2, "col": 3 },
+    { "row": 2, "col": 7 },
+    { "row": 3, "col": 1 },
+    { "row": 3, "col": 5 },
+    { "row": 4, "col": 0 },
+    { "row": 4, "col": 3 },
+    { "row": 5, "col": 0 },
+    { "row": 5, "col": 3 },
+    { "row": 6, "col": 0 },
+    { "row": 6, "col": 7 },
+    { "row": 7, "col": 3 },
+    { "row": 8, "col": 3 },
+    { "row": 8, "col": 4 },
+    { "row": 9, "col": 4 },
+    { "row": 9, "col": 5 }
+  ],
+  "requiredClearCount": 10
+}

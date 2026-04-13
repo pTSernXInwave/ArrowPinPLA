@@ -1,0 +1,39 @@
+{
+  "__version__": "1.0.6",
+  "general": {
+    "designResolution": {
+      "fitHeight": true,
+      "width": 1080,
+      "height": 1920
+    }
+  },
+  "physics": {
+    "collisionGroups": [
+      {
+        "index": 1,
+        "name": "char"
+      },
+      {
+        "index": 2,
+        "name": "ground"
+      },
+      {
+        "index": 3,
+        "name": "Stone"
+      }
+    ],
+    "collisionMatrix": {
+      "0": 1,
+      "1": 12,
+      "2": 14,
+      "3": 14
+    }
+  },
+  "custom_joint_texture_layouts": [],
+  "layer": [
+    {
+      "name": "TOP",
+      "value": 524288
+    }
+  ]
+}

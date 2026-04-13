@@ -1,0 +1,12 @@
+Banner.png
+size:1539,1539
+filter:Linear,Linear
+pma:true
+down
+bounds:2,170,709,212
+down_gray
+bounds:2,384,714,213
+up
+bounds:2,1069,1535,468
+up_gray
+bounds:2,599,1535,468
