@@ -19,6 +19,8 @@ export class GameControl extends Component {
     public static get instance(): GameControl {
         return GameControl._instance;
     }
+    @property(Node)
+    butNode: Node = null
     @property(Camera)
     camMove : Camera = null;
     @property(Node)
@@ -423,6 +425,10 @@ export class GameControl extends Component {
 
     private onArrowPassedNoCollision(arrowId: string) {
         this.arrowPassCount++;
+        if(this.arrowPassCount >= 3) {
+            this.butNode.active = true;
+            return;
+        }
         if(this.arrowPassCount >= this.totalArrow ){
 
             this.actWin();
