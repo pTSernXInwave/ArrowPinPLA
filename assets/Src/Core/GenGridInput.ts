@@ -445,7 +445,7 @@ export class GenGridInput extends Component {
 
         // Set style cho path này
         this.graphics.lineWidth = pathData.lineWidth;
-        this.graphics.strokeColor = pathData.color;
+        this.graphics.strokeColor = Color.WHITE.clone();
         this.graphics.fillColor = pathData.color;
 
         // Vẽ đường

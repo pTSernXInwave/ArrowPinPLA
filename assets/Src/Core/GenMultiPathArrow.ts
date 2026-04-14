@@ -1,4 +1,4 @@
-import { color, Color } from 'cc';
+import { color, Color, v3 } from 'cc';
 import { Graphics } from 'cc';
 import { Vec3, Vec2 } from 'cc';
 import { _decorator, Component, Node, JsonAsset, SpriteFrame, Sprite, UITransform, instantiate, Layers, Label } from 'cc';
@@ -1394,6 +1394,7 @@ export class GenMultiPathArrow extends Component {
         for (const pos of arrow.startMarkerPositions) {
             this.graphics.circle(pos.x, pos.y, markerRadius);
             this.graphics.fill();
+
         }
     }
 
@@ -1875,6 +1876,7 @@ export class GenMultiPathArrow extends Component {
         }
 
         this.graphics.close();
+        this.graphics.stroke();
         this.graphics.fill();
     }
 
@@ -1907,7 +1909,7 @@ export class GenMultiPathArrow extends Component {
         // Vẽ đường
         this.graphics.lineWidth = lineWidth;
         this.graphics.lineJoin = 1; // ROUND
-        this.graphics.strokeColor = arrow.color;
+        this.graphics.strokeColor = Color.WHITE;
         this.graphics.fillColor = arrow.color;
 
         // Tính khoảng cách rút ngắn để line không lòi ra arrow head
@@ -1963,7 +1965,7 @@ export class GenMultiPathArrow extends Component {
                     const lineWidth = arrow.lineWidth;
                     this.graphics.lineWidth = lineWidth;
                     this.graphics.lineJoin = 1;
-                    this.graphics.strokeColor = arrow.color;
+                    this.graphics.strokeColor = Color.WHITE;
                     this.graphics.fillColor = arrow.color;
                     if (this.useFilledBody) {
                         this.drawArrowBodyFilled([tailPos, targetPos], lineWidth / 2, arrow.color);
@@ -1983,8 +1985,10 @@ export class GenMultiPathArrow extends Component {
         // Vẽ đường
         this.graphics.lineWidth = lineWidth;
         this.graphics.lineJoin = 1; // ROUND
-        this.graphics.strokeColor = arrow.color;
+        this.graphics.strokeColor = Color.WHITE;
         this.graphics.fillColor = arrow.color;
+
+        console.log("REACH")
 
         // Chỉ rút ngắn line và vẽ arrow head nếu head chưa đến target
         if (!arrow.headReachedTarget) {
@@ -2169,6 +2173,7 @@ export class GenMultiPathArrow extends Component {
         this.graphics.lineTo(base1X, base1Y);
         this.graphics.lineTo(base2X, base2Y);
         this.graphics.close();
+        this.graphics.stroke();
         this.graphics.fill();
     }
 
@@ -2206,6 +2211,7 @@ export class GenMultiPathArrow extends Component {
         this.graphics.lineTo(base1X, base1Y);
         this.graphics.lineTo(base2X, base2Y);
         this.graphics.close();
+        this.graphics.stroke();
         this.graphics.fill();
     }
 
@@ -2742,6 +2748,7 @@ export class GenMultiPathArrow extends Component {
      */
     private updateArrowSprites(arrowId: string, positions: Vec2[], arrow: MovingArrow) {
         let spriteData = this.arrowSpriteNodes.get(arrowId);
+        console.log("UUU",)
 
         // Tạo container nếu chưa có
         if (!spriteData) {
@@ -2946,6 +2953,7 @@ export class GenMultiPathArrow extends Component {
         const uiTransform = node.getComponent(UITransform) || node.addComponent(UITransform);
         uiTransform.anchorX = 0;  // Anchor ở đầu trái để dễ xoay
         uiTransform.anchorY = 0.5;
+        node.scale = v3(2, 2, 2)
 
         return node;
     }
@@ -2964,6 +2972,7 @@ export class GenMultiPathArrow extends Component {
         const uiTransform = node.getComponent(UITransform) || node.addComponent(UITransform);
         uiTransform.anchorX = 0.5;
         uiTransform.anchorY = 0.5;
+        node.scale = v3(2, 2, 2)
 
         return node;
     }
