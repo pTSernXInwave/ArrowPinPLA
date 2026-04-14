@@ -132,7 +132,7 @@ export class GameControl extends Component {
 
     protected _saveCamPos: Vec3 = v3()
     onLoad() {
-        this._savedZoom = this.camFocus.orthoHeight
+
         this._saveCamPos = this.camFocus.node.worldPosition.clone();
 
         GameControl._instance = this;
@@ -162,8 +162,10 @@ export class GameControl extends Component {
         }
     }
 
+
     NextLevel(){
-        GameManager.instance.audioManager.stopSingleSound("sfx_voice_terriblesing")
+        this.animWin.stop();
+        //GameManager.instance.audioManager.stopSingleSound("sfx_voice_terriblesing")
         this.offNodex.forEach(_ => _.active = false)
         //this.confettiManager.node.active = false;
         this.camFocus.node.setWorldPosition(this._saveCamPos)
@@ -180,6 +182,7 @@ export class GameControl extends Component {
 
 
     start() {
+        this._savedZoom = this.camFocus.orthoHeight
         this._hasHandledLevelInitialized = false;
         // Đăng ký callbacks với ArrowController
         if (this.arrowController) {
@@ -264,11 +267,10 @@ export class GameControl extends Component {
             return;
         }
 
-        const activeArrows = this.fakeLevelArrowController.getActiveArrows();
-        this.fakeLevelArrowController.setTutorialArrow('path-1');
+        this.fakeLevelArrowController.setTutorialArrow('path-35');
 
         if (this.handTut) {
-            const centerWorldPos = this.fakeLevelArrowController.getArrowCenterWorldPosition('path-1');
+            const centerWorldPos = this.fakeLevelArrowController.getArrowCenterWorldPosition('path-35');
             if (centerWorldPos) {
                 const localPos = new Vec3();
                 this.handTut.parent.inverseTransformPoint(localPos, centerWorldPos);
@@ -453,15 +455,16 @@ export class GameControl extends Component {
     focusNode: Node = null;
     @property([Node])
     offNodex: Node[] =[] 
+    @property([Node])
+    offNodex2: Node[] =[] 
     @property({})
     winAnim: string = ''
 
     protected _savedZoom = 0
     protected actWin() {
+
+        this.offNodex2.forEach(_ => _.active = false)
         this.confettiManager?.playWin();
-        //GameManager.instance.audioManager.playSound('sfx_ui_win')
-        //GameManager.instance.audioManager.playSound('Firework')
-        //GameManager.instance.audioManager.playSound('sfx_voice_terriblesing')
         this.animWin?.play();
         this.enemySkeleton.setAnimation(0, this.winAnim, true);
         const _delay = this.animWin.defaultClip.duration + this.extraDelay;

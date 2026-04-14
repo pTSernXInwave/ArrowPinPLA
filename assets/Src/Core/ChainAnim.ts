@@ -22,19 +22,26 @@ export class ChainAnim extends Component {
     play() {
         this.skeleton.timeScale = this.numScale
         this.anims.forEach((_, _idx) => {
-            console.log("SET >>", _)
             if(this.isEnableMix) {
                 const _last = this.anims[_idx - 1];
                 _last && this.skeleton.setMix(_last, _, 0.25);
             }
-            _idx == 0 ? this.skeleton.setAnimation(0, _, false) : this.skeleton.addAnimation(0, _, this.isLoopOnEnd ? _idx === this.anims.length - 1 : false)
+            const _is = this.isLoopOnEnd ? _idx === this.anims.length - 1 : false
+            _idx == 0 ? this.skeleton.setAnimation(0, _, _is) : this.skeleton.addAnimation(0, _, _is)
         })
 
         console.log("PLAY", this.anims)
     }
 
     protected start(): void {
-        this.anims.forEach(_ => console.log(">>", _))
         this.isOnLoad && this.play();
+    }
+
+    @property({})
+    get execute() { return false }
+    set execute(x: boolean) {
+        if(!x) return
+            this.play();
+
     }
 }
