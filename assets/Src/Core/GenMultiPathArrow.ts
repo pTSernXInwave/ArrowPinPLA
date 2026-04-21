@@ -1235,8 +1235,10 @@ export class GenMultiPathArrow extends Component {
     private redrawAllSmooth() {
         if (this.useSpriteRendering) {
             this.redrawWithSprites();
+            console.log("ReDraw With Sprite")
         } else if (this.useGraphicsRendering && this.graphics) {
             this.redrawWithGraphics();
+            console.log("ReDraw With Grap")
         }
 
         this.updateArrowDebugLabels();
@@ -1898,6 +1900,7 @@ export class GenMultiPathArrow extends Component {
      */
     private drawArrowOnGrid(arrow: MovingArrow) {
         const tailDistance = arrow.headDistance - arrow.arrowLength;
+        console.log("drawArrowOnGrid >>", arrow)
 
         // Lấy positions trên path
         const positions = this.getPositionsInRange(arrow.pathPoints, tailDistance, arrow.headDistance);
@@ -1941,6 +1944,7 @@ export class GenMultiPathArrow extends Component {
      * Vẽ arrow khi đang ở ngoài grid (dùng full path)
      */
     private drawArrowOnOuterLane(arrow: MovingArrow) {
+        console.log(">>>>>>>", arrow)
         if (arrow.fullPathPoints.length < 2) return;
 
         // Tính tail và head distance trên full path
