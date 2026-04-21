@@ -1243,7 +1243,7 @@ export class GenMultiPathArrow extends Component {
     }
 
     private updateArrowDebugLabels() {
-        if (!this.isDebug && DEBUG) {
+        if (!this.isDebug) {
             this.clearArrowDebugLabels();
             return;
         }
